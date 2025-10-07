@@ -1,0 +1,163 @@
+/* === RESET ===*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: #708090;
+  color: #9ca770;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === HEADER ===*/
+header {
+  background: #ffa500;
+  color: ivory;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: ivory;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #c2b280;
+}
+
+nav.show {
+  display: flex;
+}
+
+/* === SECTIONS ===*/
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-section .content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 160px;
+  border-radius: 50%;
+  border: 3px solid #9ca770;
+}
+
+.project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: ivory;
+  border: 2px soild #9ca770;
+  border-radius: 8px;
+  padding: 20px;
+  width: 280px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(83, 104, 120, 0.1);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #c2b280;
+}
+
+/* === FORM ===*/
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border: 2px solid #9ca770;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+button {
+  background: #c2b280;
+  color: ivory;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #708090;
+}
+
+/* === FOOTER ===*/
+footer {
+  background: #ffa500;
+  color: ivory;
+  text-align: center;
+  padding: 20px;
+}
+
+/* === RESPONSIVE ===*/
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(83, 104, 120, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  nav a {
+    color: ivory;
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  nav.show {
+    display: flex;
+  }
+  .about-section .content-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
